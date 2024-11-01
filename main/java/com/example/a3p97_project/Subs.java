@@ -35,15 +35,7 @@ public class Subs extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        /*
-        setContentView(R.layout.activity_subs);
-         EdgeToEdge.enable(this);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
-        */
+
         binding = ActivitySubsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         billingClient = BillingClient.newBuilder(this)
@@ -72,7 +64,7 @@ public class Subs extends AppCompatActivity {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
                     && purchases != null) {
                 for (Purchase purchase : purchases) {
-
+                    //handlePurchase(purchase);
 
                 }
             } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {

@@ -17,179 +17,27 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:layout_width="411dp"
-        android:layout_height="805dp"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <LinearLayout
+        <SearchView
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School A"
-                android:textSize="35sp" />
+            app:queryHint="Search Name" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School B"
-                android:textSize="35sp" />
+        <ListView
+            android:id="@+id/list_school"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School C"
-                android:textSize="35sp" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School D"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School E"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School F"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School G"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School H"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button20"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School I"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School J"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School K"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button23"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School L"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School M"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School N"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School O"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button27"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="School P"
-                android:textSize="35sp" />
-
-        </LinearLayout>
-    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

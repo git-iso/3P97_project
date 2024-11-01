@@ -17,180 +17,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ScrollView
-        android:layout_width="412dp"
-        android:layout_height="795dp"
-        android:layout_marginTop="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <LinearLayout
+        <SearchView
+            android:id="@+id/search_bar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="right"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club A"
-                android:textSize="35sp" />
+            app:queryHint="Search Name" />
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club B"
-                android:textSize="35sp" />
+        <ListView
+            android:id="@+id/list_club"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club C"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club D"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club E"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club F"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button18"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club G"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club H"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button20"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club I"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button21"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club J"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club K"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button23"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club L"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club M"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club N"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club O"
-                android:textSize="35sp" />
-
-            <Button
-                android:id="@+id/button27"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:drawableLeft="@drawable/ic_launcher_foreground"
-                android:gravity="center_horizontal|center_vertical"
-                android:onClick="btnClick"
-                android:text="Club P"
-                android:textSize="35sp" />
-
-        </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
