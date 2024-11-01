@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Students">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="401dp"
+        android:layout_height="83dp"
+        android:gravity="center_horizontal"
+        android:text="Select Club to Sponsor"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="412dp"
+        android:layout_height="795dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club A"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club B"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club C"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button15"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club D"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button16"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club E"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button17"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club F"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button18"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club G"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button19"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club H"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club I"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club J"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button22"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club K"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button23"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club L"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button24"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club M"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button25"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club N"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button26"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club O"
+                android:textSize="35sp" />
+
+            <Button
+                android:id="@+id/button27"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/ic_launcher_foreground"
+                android:gravity="center_horizontal|center_vertical"
+                android:onClick="btnClick"
+                android:text="Club P"
+                android:textSize="35sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
