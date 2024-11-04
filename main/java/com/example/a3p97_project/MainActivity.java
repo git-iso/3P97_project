@@ -40,13 +40,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        billingClient = BillingClient.newBuilder(this)
-                .setListener(purchasesUpdatedListener)
-                .enablePendingPurchases()
-                .build();
-
-        query_purchase();
-
         searchView = findViewById(R.id.search_bar);
         listView = findViewById(R.id.list_school);
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, android.R.id.text1, nameList);
@@ -76,96 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private PurchasesUpdatedListener purchasesUpdatedListener = new PurchasesUpdatedListener() {
-        @Override
-        public void onPurchasesUpdated(BillingResult billingResult, List<Purchase> purchases) {
-            // To be implemented in a later section.
-        }
-    };
-
-
-
-    private void query_purchase(){
-
-        billingClient.startConnection(new BillingClientStateListener() {
-            @Override
-            public void onBillingServiceDisconnected() {
-
-            }
-
-            @Override
-            public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
-
-                if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK){
-
-                    ExecutorService executorService = Executors.newSingleThreadExecutor();
-                    executorService.execute(() -> {
-
-                        try{
-
-                            billingClient.queryPurchasesAsync(
-                                    QueryPurchasesParams.newBuilder()
-                                            .setProductType(BillingClient.ProductType.SUBS)
-                                            .build(),
-                                    (billingResult1, purchaseList) -> {
-
-                                        for (Purchase purchase: purchaseList){
-
-                                            if (purchase != null && purchase.isAcknowledged()){
-
-                                                isPremium = true;
-
-                                            }
-
-                                        }
-
-
-                                    }
-
-
-                            );
-
-                        } catch (Exception e){
-
-                            isPremium = false;
-
-                        }
-
-                        runOnUiThread(() -> {
-
-                            try{
-                                Thread.sleep(1000);
-
-                            } catch (InterruptedException e){
-
-                                e.printStackTrace();
-
-                            }
-
-                            if (isPremium) {
-
-                                ConnectionClass.premium = true;
-                                ConnectionClass.locked = false;
-
-                            } else {
-
-                                ConnectionClass.premium = false;
-                                //Intent i = new Intent(MainActivity.this, Subs.class);
-                                //startActivity(i);
-
-                            }
-
-                        });
-
-                    });
-
-                }
-
-            }
-        });
-
 
     }
 
-
-}
