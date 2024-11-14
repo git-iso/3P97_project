@@ -46,12 +46,12 @@ public class Subs extends AppCompatActivity {
 
         if (ConnectionClass.premium){
 
-            binding.txtSubstatus.setText("Status: Already Subscribed");
+            binding.txtSubstatus.setText("Already Subscribed");
             binding.btnSub.setVisibility(View.GONE);
 
         } else {
 
-            binding.txtSubstatus.setText("Status: Not Subscribed");
+            binding.txtSubstatus.setText("Not Subscribed");
 
         }
 
@@ -64,7 +64,7 @@ public class Subs extends AppCompatActivity {
             if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.OK
                     && purchases != null) {
                 for (Purchase purchase : purchases) {
-                    //handlePurchase(purchase);
+                    handlePurchase(purchase);
 
                 }
             } else if (billingResult.getResponseCode() == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED) {
@@ -361,13 +361,66 @@ public class Subs extends AppCompatActivity {
 
     }
 
-    /*
-    public void btn_price_click(View v) {
+    public void btn_item1_click(View v){
 
-        getPrice();
+        billingClient.startConnection(new BillingClientStateListener() {
+            @Override
+            public void onBillingServiceDisconnected() {
+            }
+
+            @Override
+            public void onBillingSetupFinished(@NonNull BillingResult billingResult) {
+
+                QueryProductDetailsParams queryProductDetailsParams =
+                        QueryProductDetailsParams.newBuilder()
+                                .setProductList(
+                                        ImmutableList.of(
+                                                QueryProductDetailsParams.Product.newBuilder()
+                                                        .setProductId("item1")
+                                                        .setProductType(BillingClient.ProductType.INAPP)
+                                                        .build()))
+                                .build();
+
+                billingClient.queryProductDetailsAsync(
+                        queryProductDetailsParams,
+                        new ProductDetailsResponseListener() {
+                            public void onProductDetailsResponse(BillingResult billingResult,
+                                                                 List<ProductDetails> productDetailsList) {
+
+                                for (ProductDetails productDetails : productDetailsList) {
+
+                                    String offer = productDetails.getSubscriptionOfferDetails().get(0).getOfferToken();
+                                    ImmutableList<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
+                                            ImmutableList.of(
+                                                    BillingFlowParams.ProductDetailsParams.newBuilder()
+                                                            // retrieve a value for "productDetails" by calling queryProductDetailsAsync()
+                                                            .setProductDetails(productDetails)
+                                                            // For one-time products, "setOfferToken" method shouldn't be called.
+                                                            // For subscriptions, to get an offer token, call
+                                                            // ProductDetails.subscriptionOfferDetails() for a list of offers
+                                                            // that are available to the user.
+                                                            //.setOfferToken(offer)
+                                                            .build()
+                                            );
+                                    BillingFlowParams billingFlowParams = BillingFlowParams.newBuilder()
+                                            .setProductDetailsParamsList(productDetailsParamsList)
+                                            .build();
+
+// Launch the billing flow
+                                    billingClient.launchBillingFlow(Subs.this, billingFlowParams);
+
+
+                                }
+                            }
+                        });
+
+            }
+
+        });
+
 
     }
-*/
+
     public void btn_sub_click(View v) {
 
         billingClient.startConnection(new BillingClientStateListener() {
